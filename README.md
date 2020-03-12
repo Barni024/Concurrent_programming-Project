@@ -1,1 +1,1 @@
-# PW
+# Concurrent programming - Project
