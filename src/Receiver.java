@@ -8,7 +8,7 @@ public class Receiver implements Runnable {
     this.pac_no = pac_no;
     this.paczkomat = paczkomat;
 
-    System.out.println("Ja odbiorca " + this.id + " istnieje w paczkomacie "+ paczkomat.getPaczkomat_no());
+    System.out.println("Reciever No. " + this.id + " is in parcel locker No. "+ paczkomat.getPaczkomat_no());
   }
 
   int getId(){

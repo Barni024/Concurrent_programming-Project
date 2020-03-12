@@ -23,7 +23,7 @@ class Paczkomat {
       packages.put(aPackage.getPac_no(), aPackage);
 
       System.out.println();
-      System.out.println("ILOSC PACZEK W PACZKOMACIE "+ " nr. " + paczkomat_no + " to " + packages.size());
+      System.out.println("Number of packages in parcel locker No. " + paczkomat_no + " is " + packages.size());
 
       Thread thread = new Thread(receiver);
       thread.start();
@@ -49,15 +49,15 @@ class Paczkomat {
 
       if(packages.size() == 0){
         System.out.println();
-        System.out.println("Paczkomat nr " + paczkomat.getPaczkomat_no() + " jest pusty");
+        System.out.println("Parcel locker No. " + paczkomat.getPaczkomat_no() + " is empty");
         return;
       }
 
       packages.remove(pac_no);
 
       System.out.println();
-      System.out.println("ILOSC PACZEK W PACZKOMACIE "+ " nr. " + paczkomat_no + " to " + packages.size() );
-      System.out.println("Paczka nr. " + pac_no + " zostala wyjeta przez odbiorce " + id + " z paczkomatu nr. "+ paczkomat_no);
+      System.out.println("Number of packages in parcel locker No. " + paczkomat_no + " is " + packages.size());
+      System.out.println("Package No. " + pac_no + " was taken by reciever No. " + id + " from parcel locker No. "+ paczkomat_no);
 
     } catch (InterruptedException e) {
       e.printStackTrace();

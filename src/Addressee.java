@@ -15,7 +15,7 @@ public class Addressee implements Runnable {
 
     receiver = new Receiver(rand.nextInt(1000),aPackage.getPac_no(),this.paczkomat);
 
-    System.out.println("Ja adresat " + this.id + " istnieje w paczkomacie "+ paczkomat.getPaczkomat_no());
+    System.out.println("Addressee No. " + this.id + " is in parcel locker No. "+ paczkomat.getPaczkomat_no());
   }
 
   @Override
@@ -24,9 +24,9 @@ public class Addressee implements Runnable {
 
     if(receiver == null){
       System.out.println();
-      System.out.println("Paczkomat nr " + paczkomat.getPaczkomat_no() + " jest przepelniony");
+      System.out.println("Parcel locker No. " + paczkomat.getPaczkomat_no() + " is full");
       return;
     }
-    System.out.println("Adresat nr. " + id +" nadal paczke nr. " + aPackage.getPac_no() + " w paczkomacie nr. "+ paczkomat.getPaczkomat_no() + " do odbiorcy nr. " + receiver.getId());
+    System.out.println("Addressee No. " + id +" is posting a package No. " + aPackage.getPac_no() + " in parcel locker No. "+ paczkomat.getPaczkomat_no() + " to reciever No. " + receiver.getId());
   }
 }
